@@ -4,6 +4,11 @@
   "newProjectRoot": "projects",
   "projects": {
     "angular9-i18n-ivy-ssr": {
+      "i18n": {
+        "locales": {
+          "es": "messages.es.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -33,6 +38,11 @@
             "scripts": []
           },
           "configurations": {
+            "es": {
+              "localize": [
+                "es"
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -71,6 +81,9 @@
           "configurations": {
             "production": {
               "browserTarget": "angular9-i18n-ivy-ssr:build:production"
+            },
+            "es": {
+              "browserTarget": "angular9-i18n-ivy-ssr:build:es"
             }
           }
         },
